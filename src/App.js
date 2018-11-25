@@ -1,5 +1,6 @@
 import React, { Component , Fragment } from 'react';
 import {GlobalStyle} from './style';
+import Header from './common/header'
 
 
 class App extends Component {
@@ -7,7 +8,7 @@ class App extends Component {
     return (
         <Fragment>
           <GlobalStyle />
-          <div>zhi</div>
+          <Header />
         </Fragment>
      
     );
