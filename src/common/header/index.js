@@ -7,11 +7,39 @@ import {
   Nav,
   NavItem,
   NavSearch,
+  SearchInfo,
+  SearchInfoTitle,
+  SearchInfoSwitch,
+  SearchInfoList,
+  SearchInfoItem,
   Addition,
   Button,
   SearchWrapper
 } from './style';
 import { actionCreators } from './store';
+
+const getListArea = (show)=>{
+  if (show) {
+    return (
+      <SearchInfo >
+            <SearchInfoTitle>
+              Hot Search
+              <SearchInfoSwitch>refresh</SearchInfoSwitch>
+            </SearchInfoTitle>
+
+            <SearchInfoList>
+              <SearchInfoItem>live</SearchInfoItem>
+              <SearchInfoItem>sport</SearchInfoItem>
+              <SearchInfoItem>study</SearchInfoItem>
+              <SearchInfoItem>coffee</SearchInfoItem>
+              <SearchInfoItem>pet</SearchInfoItem>
+            </SearchInfoList>
+          </SearchInfo>
+    )
+  }else{
+    return null;
+  }
+}
 
 const Header = (props) => {
   return (
@@ -39,6 +67,7 @@ const Header = (props) => {
               ></NavSearch>
           </CSSTransition>
           <i className = {props.focused ? 'focused iconfont' : 'iconfont'}>&#xe614;</i>
+          {getListArea(props.focused)}
         </SearchWrapper>
 
       </Nav>
