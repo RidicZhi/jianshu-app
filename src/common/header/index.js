@@ -21,21 +21,33 @@ import { actionCreators } from './store';
 class Header extends Component {
 
   getListArea = ()=>{
-    const { focused, list} = this.props;
-    if (focused) {
+    const { focused, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave , handleSwitchPage } = this.props;
+    const newList = list.toJS();
+    const pageList = [];
+
+    if(newList.length){
+      for (let i = (page-1)*10 ; i < page*10 ; i++) {
+        pageList.push(
+          <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+        )
+      }
+    }
+
+    if (focused||mouseIn) {
       return (
-        <SearchInfo >
+        <SearchInfo 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        >
               <SearchInfoTitle>
                 Hot Search
-                <SearchInfoSwitch>refresh</SearchInfoSwitch>
+                <SearchInfoSwitch onClick={() => handleSwitchPage(page,totalPage) }>
+                  refresh
+                </SearchInfoSwitch>
               </SearchInfoTitle>
   
               <SearchInfoList>
-                {
-                  list.map((item) =>{
-                    return <SearchInfoItem key={item}>{item}</SearchInfoItem>
-                  })
-                }
+                {pageList}
               </SearchInfoList>
             </SearchInfo>
       )
@@ -43,6 +55,7 @@ class Header extends Component {
       return null;
     }
   }
+
   render(){
     const { focused, handleInputFocus, handleInputBlur } = this.props;
     return (
@@ -92,7 +105,10 @@ const mapStateToProps = (state) => {
   return {
     //focused: state.get('header').get('focused')
     focused: state.getIn(['header','focused']),
-    list: state.getIn(['header','list'])
+    list: state.getIn(['header','list']),
+    page: state.getIn(['header','page']),
+    totalPage: state.getIn(['header','totalPage']),
+    mouseIn: state.getIn(['header','mouseIn'])
   }
 }
 
@@ -104,6 +120,20 @@ const mapDispatchToProps = (dispatch) =>{
     },
     handleInputBlur(){
       dispatch(actionCreators.searchBlurAction());
+    },
+    handleMouseEnter(){
+      dispatch(actionCreators.mouseEnter());
+    },
+    handleMouseLeave(){
+      dispatch(actionCreators.mouseLeave());
+    },
+    handleSwitchPage(page, totalPage){
+      if(page< totalPage){
+        dispatch(actionCreators.switchPage(page+1));
+      }else {
+        dispatch(actionCreators.switchPage(1));
+      }
+      
     }
   }
 }
