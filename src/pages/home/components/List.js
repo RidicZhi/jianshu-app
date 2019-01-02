@@ -24,16 +24,14 @@ class List extends Component{
   }
 }
 
-const mapState = (state) => {
-  return{
+const mapState = (state) => ({
     list: state.getIn(['home','articleList'])
   }
-}
+)
 
-const mapDispatch = (dispatch) => {
-  return{
+const mapDispatch = (dispatch) => ({
 
   }
-}
+)
 
 export default connect(mapState,mapDispatch)(List);

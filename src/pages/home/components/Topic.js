@@ -25,17 +25,15 @@ class Topic extends Component{
   }
 }
 
-const mapState = (state) => {
-  return{
+const mapState = (state) => ({
     topicList: state.getIn(['home','topicList'])
   }
-}
+)
 
-const mapDispatch = (dispatch) => {
-  return{
-
+const mapDispatch = (dispatch) => ({
+  
   }
-}
+)
 
 
 export default connect(mapState, mapDispatch)(Topic)
