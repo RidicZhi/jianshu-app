@@ -13,13 +13,13 @@ export const HomeLeft = styled.div`
   width: 625px;
   .banner-img{
     width:625px;
-    height:240px;
+    height:260px;
   }
 `; 
 
 export const HomeRight = styled.div`
   float: right;
-  width: 240px;
+  width: 280px;
 `; 
 
 export const TopicWrapper = styled.div`
@@ -76,4 +76,16 @@ export const ListInfo = styled.div`
     font-size: 13px;
     color: #999;
   }
+`
+
+export const RecommendWrapper = styled.div`
+  margin: 30px 0;
+  width: 280px;
+`
+
+export const RecommendItem = styled.div`
+  width: 280px;
+  height: 50px;
+  background: url(${(props) => props.imgUrl});
+  background-size: contain;
 `

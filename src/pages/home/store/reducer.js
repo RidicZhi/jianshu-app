@@ -26,6 +26,22 @@ const defaultState = fromJS({
     title: '吴奇隆情史录：爱是天时地利的迷信',
     desc: '文/婉兮 图/网络 1 吴奇隆原本是体育生，奥运会中华台北的“种子选手”之一，和唱歌跳舞演戏风马牛不相及。 但某天在大街上摆地摊时，青春帅气的...',
     imgUrl: '//upload-images.jianshu.io/upload_images/1812827-cb48691f988a39c3.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240'
+  }],
+  recommendList:[{
+    id: 1,
+    imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png'
+  },{
+    id: 2,
+    imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png'
+  },{
+    id: 3,
+    imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png'
+  },{
+    id: 4,
+    imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png'
+  },{
+    id: 5,
+    imgUrl: '//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png'
   }]
 });
 
