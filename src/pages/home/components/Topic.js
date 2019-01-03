@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { TopicWrapper,TopicItem } from '../style'
+import { TopicWrapper,TopicItem } from '../style';
 
 class Topic extends Component{
   render(){
