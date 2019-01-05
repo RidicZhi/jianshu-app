@@ -115,4 +115,19 @@ export const WriterWrapper = styled.div`
 export const WriterItem = styled.div`
  
 `
+export const BackTop = styled.div`
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #dcdcdc;
+  color: #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+`
+
+
 
