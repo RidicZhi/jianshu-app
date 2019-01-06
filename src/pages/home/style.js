@@ -127,6 +127,7 @@ export const BackTop = styled.div`
   color: #ccc;
   border-radius: 10px;
   font-size: 14px;
+  cursor: pointer;
 `
 
 
