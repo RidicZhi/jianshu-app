@@ -35,6 +35,7 @@ class Home extends PureComponent{
       </HomeWrapper>
     )
   }
+
   componentDidMount(){
     this.props.getHomeData();
     this.bindEvents();
@@ -51,7 +52,7 @@ class Home extends PureComponent{
 
 const mapState = (state)=>({
   showScroll: state.getIn(['home','showScroll'])
-})
+});
 
 const mapDispatch = (dispatch)=>({
   getHomeData(){

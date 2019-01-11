@@ -24,7 +24,7 @@ export default (state = defaultState, action) => {
         articlePage: action.nextPage
       });
     case constants.TOGGLE_SCROLL_TOP:
-      return state.set('showScroll', action.show)
+      return state.set('showScroll', action.show);
     default:
       return state;
   }

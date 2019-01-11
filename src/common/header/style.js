@@ -108,7 +108,6 @@ export const SearchInfo = styled.div`
 `;
 
 export const SearchInfoTitle = styled.div`
-  //这个区域套在SearchInfo里，自动水平居中，不知道为啥
   margin-top: 20px;
   margin-bottom: 15px;
   line-height: 20px;

@@ -28,12 +28,6 @@ class Topic extends PureComponent{
 const mapState = (state) => ({
     topicList: state.getIn(['home','topicList'])
   }
-)
+);
 
-const mapDispatch = (dispatch) => ({
-  
-  }
-)
-
-
-export default connect(mapState, mapDispatch)(Topic)
+export default connect(mapState, null)(Topic)

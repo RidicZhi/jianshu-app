@@ -5,7 +5,7 @@ const getDetailData = (result) => ({
   type: constants.GET_DETAIL_DATA,
   title: result.title,
   content: result.content
-})
+});
 
 export const getDetail = (id) => {
   return (dispatch)=>{
@@ -16,4 +16,4 @@ export const getDetail = (id) => {
       console.log(err)
     })
   }
-}
+};

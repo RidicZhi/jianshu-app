@@ -89,7 +89,7 @@ export const LoadMore = styled.div`
   color:#fff;
   border-radius: 20px;
   cursor: pointer;
-`
+`;
 
 export const RecommendWrapper = styled.div`
   margin: 30px 0;
@@ -111,10 +111,12 @@ export const WriterWrapper = styled.div`
   height: 300px;
   line-height: 300px;
   text-align:center;
-`
+`;
+
 export const WriterItem = styled.div`
  
-`
+`;
+
 export const BackTop = styled.div`
   position: fixed;
   right: 30px;
@@ -128,7 +130,7 @@ export const BackTop = styled.div`
   border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
-`
+`;
 
 
 

@@ -13,7 +13,7 @@ const moreHomeList = (list, nextPage) => ({
   type: constants.MORE_HOME_LIST,
   list: fromJS(list),
   nextPage
-})
+});
 
 export const getHomeInfo = () => {
   return (dispatch)=>{
@@ -24,7 +24,7 @@ export const getHomeInfo = () => {
       console.log(err)
     })
   }
-}
+};
 
 export const addMoreList = (page) => {
   return (dispatch)=>{
@@ -35,9 +35,9 @@ export const addMoreList = (page) => {
       console.log(err)
     })
   }
-}
+};
 
 export const toggleTopShow = (show) => ({
   type: constants.TOGGLE_SCROLL_TOP,
   show
-})
+});

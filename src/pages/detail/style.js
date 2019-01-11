@@ -13,7 +13,8 @@ export const Header = styled.div`
   line-height: 44px;
   color: #333;
   font-weight: bold;
-`
+`;
+
 export const Content = styled.div`
   color: #2f2f2f;
   img{
@@ -29,4 +30,4 @@ export const Content = styled.div`
   b{
     font-weight: bold;
   }
-`
+`;

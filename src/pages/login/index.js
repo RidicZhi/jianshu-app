@@ -21,18 +21,16 @@ class Login extends PureComponent{
       return <Redirect to='/' />
     }
   }
-  
 }
 
 const mapState = (state) => ({
   loginStatus: state.getIn(['login','login'])
-})
+});
 
 const mapDispatch= (dispatch) => ({
   login(account, password){
     dispatch(actionCreators.login(account.value, password.value))
   }
-})
-
+});
 
 export default connect(mapState, mapDispatch)(Login);

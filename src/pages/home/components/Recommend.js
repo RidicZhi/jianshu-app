@@ -21,10 +21,6 @@ class Recommend extends PureComponent{
 
 const mapState = (state) => ({
   list: state.getIn(['home','recommendList'])
-})
+});
 
-const mapDispatch = (state) => ({
-  
-})
-
-export default connect(mapState,mapDispatch)(Recommend);
+export default connect(mapState,null)(Recommend);
