@@ -98,10 +98,12 @@ class Header extends PureComponent {
         </Nav>
   
         <Addition>
-          <Button className = 'compose'>
-            <i className = "iconfont icon-xxx">&#xe615;</i>
-            Compose
-          </Button>
+          <Link to='write'>
+            <Button className = 'compose'>
+              <i className = "iconfont icon-xxx">&#xe615;</i>
+              Compose
+            </Button>
+          </Link>
           <Button className = 'reg'>Register</Button>
         </Addition>
   
@@ -120,7 +122,7 @@ const mapStateToProps = (state) => {
     mouseIn: state.getIn(['header','mouseIn']),
     login: state.getIn(['login','login'])
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) =>{
   return {
@@ -158,6 +160,6 @@ const mapDispatchToProps = (dispatch) =>{
       dispatch(loginActionCreators.logout());
     }
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header)
